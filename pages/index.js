@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,13 +13,27 @@ export default function Home() {
         />
       </Head>
 
-      {/* Hero Section */}
-      <header className="bg-corp-blue text-white py-24 px-6 text-center">
+      {/* Branding Header with Image */}
+      <header className="bg-gradient-to-r from-corp-blue to-corp-teal text-white py-12 px-6 text-center">
         <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="mb-6"
+          >
+            <Image
+              src="/profile-pic.png"
+              alt="Basudab Chowdhury - AI Data Scientist"
+              width={200}
+              height={200}
+              className="mx-auto rounded-full border-4 border-corp-gold"
+            />
+          </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-6xl mb-4"
           >
             Basudab Chowdhury
@@ -26,7 +41,7 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl mb-6"
           >
             AI & BI Solutions Specialist
@@ -37,8 +52,8 @@ export default function Home() {
             rel="noopener noreferrer"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="inline-block bg-corp-gold text-corp-blue py-3 px-8 rounded-full text-lg font-semibold hover:bg-yellow-500 transition"
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="btn"
           >
             Download Resume
           </motion.a>
@@ -49,7 +64,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl mb-6">About Me</h2>
-          <p className="text-lg leading-relaxed">
+          <p className="text-lg leading-relaxed text-gray-700">
             With over 6 years of experience as an AI & BI Solutions Specialist,
             I specialize in developing advanced AI solutions, including Large
             Language Models (LLMs), Computer Vision, and Agent Systems.
@@ -75,10 +90,10 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Manager BI & AI Researcher</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Aman Group Ltd | Oct 2024 - Present, Dhaka
               </p>
-              <ul className="list-disc pl-6 mt-4">
+              <ul className="list-disc pl-6 mt-4 text-gray-700">
                 <li>
                   Designed AI solutions with LLMs and Computer Vision, reducing
                   processing time by 15% and increasing productivity by 10%.
@@ -114,10 +129,10 @@ export default function Home() {
               <h3 className="text-2xl">
                 Senior Manager Business Intelligence & AI Engineer
               </h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Praava Health | Mar 2024 - Oct 2024, Dhaka
               </p>
-              <ul className="list-disc pl-6 mt-4">
+              <ul className="list-disc pl-6 mt-4 text-gray-700">
                 <li>
                   Developed AI dashboards with LLMs, improving decision-making
                   by 25%.
@@ -146,10 +161,10 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Manager - Business Intelligence</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Daraz (Alibaba Group) | Feb 2022 - Feb 2024, Dhaka
               </p>
-              <ul className="list-disc pl-6 mt-4">
+              <ul className="list-disc pl-6 mt-4 text-gray-700">
                 <li>
                   Led BI team to enhance dashboards, improving reporting speed
                   by 50%.
@@ -178,10 +193,10 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Data Scientist</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 LeReve | Jan 2020 - Feb 2022, Dhaka
               </p>
-              <ul className="list-disc pl-6 mt-4">
+              <ul className="list-disc pl-6 mt-4 text-gray-700">
                 <li>
                   Improved dashboards with Tableau/Power BI, increasing
                   adoption by 30%.
@@ -208,10 +223,10 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Data Analyst</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Indigo Yin - ULTRALYSIS | Feb 2019 - Dec 2019, UK
               </p>
-              <ul className="list-disc pl-6 mt-4">
+              <ul className="list-disc pl-6 mt-4 text-gray-700">
                 <li>
                   Optimized data systems, improving processing speed by 30%.
                 </li>
@@ -236,7 +251,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl mb-8">Projects</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -244,18 +259,18 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">AI-Agent Learning Assistant</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Aman Group BD | Mar 2025 |{" "}
                 <a
                   href="https://github.com/basudabC/Study_Buddy"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline"
+                  className="underline text-corp-blue hover:text-corp-gold"
                 >
                   GitHub
                 </a>
               </p>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Built an Agentic RAG app with Streamlit, Langgraph, and
                   OpenAI, improving learning by 30%.
@@ -271,18 +286,18 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">RAG-Powered PDF Parser</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Aman Group Ltd | Oct 2024 - Nov 2024 |{" "}
                 <a
                   href="https://github.com/basudabC/HR-Resume-Management"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline"
+                  className="underline text-corp-blue hover:text-corp-gold"
                 >
                   GitHub
                 </a>
               </p>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Automated PDF extraction with RAG and LLMs, achieving 95%
                   accuracy.
@@ -298,18 +313,18 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Real-Time Healthcare Translation</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Praava Health | Oct 2024 - Nov 2024 |{" "}
                 <a
                   href="https://github.com/basudabC/RealtimeTranlate"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline"
+                  className="underline text-corp-blue hover:text-corp-gold"
                 >
                   GitHub
                 </a>
               </p>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Built a multilingual translation app with Flask and Web
                   Speech API.
@@ -325,8 +340,8 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">SQL Query Generator</h3>
-              <p className="text-corp-blue">Daraz Bangladesh | Jan 2023 - Jun 2023</p>
-              <ul className="list-disc pl-6 mt-2">
+              <p className="text-corp-teal">Daraz Bangladesh | Jan 2023 - Jun 2023</p>
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Created an LLM-powered tool for SQL queries and report
                   summarization.
@@ -342,18 +357,18 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Face Recognition System</h3>
-              <p className="text-corp-blue">
+              <p className="text-corp-teal">
                 Bangladesh Police | Jan 2021 - Jun 2021 |{" "}
                 <a
                   href="https://www.jagonews24.com/country/news/423116"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline"
+                  className="underline text-corp-blue hover:text-corp-gold"
                 >
                   Article
                 </a>
               </p>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Developed a real-time face recognition system with OpenCV.
                 </li>
@@ -368,8 +383,8 @@ export default function Home() {
               className="card"
             >
               <h3 className="text-2xl">Bangla AI Call Center</h3>
-              <p className="text-corp-blue">Aman Group Ltd | Ongoing</p>
-              <ul className="list-disc pl-6 mt-2">
+              <p className="text-corp-teal">Aman Group Ltd | Ongoing</p>
+              <ul className="list-disc pl-6 mt-2 text-gray-700">
                 <li>
                   Built a local AI call center with Bangla STT (Whisper), LLM
                   (Mistral), and TTS (Piper).
@@ -405,7 +420,7 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className="bg-corp-blue text-white p-4 rounded-lg text-center shadow hover:bg-corp-gold transition"
+                className="bg-corp-teal text-white p-4 rounded-lg text-center shadow hover:bg-corp-coral transition"
               >
                 {skill}
               </motion.div>
@@ -418,7 +433,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl mb-8">News & Articles</h2>
-          <ul className="space-y-4">
+          <ul className="space-y-4 text-gray-700">
             <li>
               <a
                 href="https://www.prothomalo.com/technology/%E0%A6%9A%E0%A6%BE%E0%A6%B0-%E0%A6%A4%E0%A6%B0%E0%A7%81%E0%A6%A3%E0%A7%87%E0%A6%B0-%E0%A6%9A%E0%A7%87%E0%A6%96"
@@ -467,8 +482,8 @@ export default function Home() {
       <section className="bg-corp-gray">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl mb-8">Contact</h2>
-          <p>Email: basudab.chowdhory@gmail.com</p>
-          <p>Phone: +88 01750 973483</p>
+          <p className="text-gray-700">Email: basudab.chowdhory@gmail.com</p>
+          <p className="text-gray-700">Phone: +88 01750 973483</p>
           <p>
             LinkedIn:{" "}
             <a
