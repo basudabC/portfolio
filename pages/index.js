@@ -405,15 +405,17 @@ export default function Home() {
               "Generative AI",
               "LLMs",
               "Agent Systems",
-              "Computer Vision",
+              "RAG",
               "NLP",
+              "Computer Vision",
               "MLOps",
               "Python",
               "SQL",
+              "Data Analytics"
               "Data Visualization",
+              "Machine Learning",
+              "Statistics",
               "Cloud Platforms",
-              "RAG",
-              "Speech-to-Text",
             ].map((skill) => (
               <motion.div
                 key={skill}
