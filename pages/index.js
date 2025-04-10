@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen font-roboto">
       <Head>
-        <title>Basudab Chowdhury | AI & BI Solutions Specialist</title>
+        <title>Basudab Chowdhury | AI Data Scientist</title>
         <meta
           name="description"
           content="Portfolio of Basudab Chowdhury, an AI & BI Solutions Specialist with over 6 years of experience in Generative AI, LLMs, and Agent Systems."
