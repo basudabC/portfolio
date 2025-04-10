@@ -25,8 +25,8 @@ export default function Home() {
             <Image
               src="/profile-pic.png"
               alt="Basudab Chowdhury - AI Data Scientist"
-              width={200}
-              height={200}
+              width={220}
+              height={220}
               className="mx-auto rounded-full border-4 border-corp-gold"
             />
           </motion.div>
