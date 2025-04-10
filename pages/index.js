@@ -411,7 +411,7 @@ export default function Home() {
               "MLOps",
               "Python",
               "SQL",
-              "Data Analytics"
+              "Data Analytics",
               "Data Visualization",
               "Machine Learning",
               "Statistics",
