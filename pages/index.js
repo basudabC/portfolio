@@ -44,7 +44,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-xl md:text-2xl mb-6"
           >
-            AI & BI Solutions Specialist
+            AI Data Scientist
           </motion.p>
           <motion.a
             href="https://drive.google.com/file/d/1lGbuTzdPwsiTikTvAHtVL9NTATdKqjKI/view?usp=sharing"
